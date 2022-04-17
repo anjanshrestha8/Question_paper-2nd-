@@ -11,7 +11,7 @@ class Acc{
     public:
         string customer_name;
         int account_num;
-        int balance;
+        float balance=0;
         int getData(){
             cout<<"Enter the details of the customer."<<endl;
             cout<<"Enter the name of the customer."<<endl;
@@ -37,21 +37,19 @@ class Acc{
 class Current : public Acc{
     public:
         void calculateCI(){
-                static float rate2=10;
-                int time1;
-                float bala;
-                int balaCI = balance;
-                cout<<"Enter the time this plan in year."<<endl;
-                cin>>time1;
-                cout<<balaCI;
-                bala=balance*pow((1+rate2/100),time1);
-                /*bala=balance+bala;
-                cout<<"The total amount of money in the Current Account is :-"<<bala<<endl;
-                bala=balance*pow((1+rate2/100),time);
-                bala=balance+bala;
-                cout<<"The total amount of money in the Current Account is :-"<<bala<<endl;*/
+            static float rate=10;
+            float time1=0;
+            float bala=0;
+            cout<<"Enter the time"<<endl;
+            cin>>time1;
+            //cout<<"rate"<<rate;
+            bala=balance*pow((1+rate/100),time1);
+            cout<<"The Compound Intrest is :-"<<bala<<endl;
+            bala=balance+bala;
+            cout<<"The total amount of Compound Intrest is:-"<<bala<<endl;
             }
 };
+//float Current:: rate=10;
 class Saving : public Acc{
     public:
          void calculateSI(){
@@ -67,17 +65,22 @@ class Saving : public Acc{
         }
 
 };
+//float Saving :: rate1=10;
 int main(){
     Saving obj;
     Current obj1;
     int a;
-    a=obj.getData();
     a=obj.choose();
     if(a==1){
+        a=obj.getData();
         obj.calculateSI();
     }
-    else{
+    else if(a==2){
+        a=obj1.getData();
         obj1.calculateCI();
+    }
+    else{
+        cout<<"The choice is invalid"<<endl;
     }
     return 0;
     
