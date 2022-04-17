@@ -16,10 +16,13 @@ class Acc{
             cout<<"Enter the details of the customer."<<endl;
             cout<<"Enter the name of the customer."<<endl;
             getline(cin,customer_name);
+            fflush(stdin);
             cout<<"Enter the account number."<<endl;
             cin>>account_num;
+            fflush(stdin);
             cout<<"Enter the balance."<<endl;
             cin>>balance;
+            fflush(stdin);
             return 1;
         }
         int choose(){
@@ -34,26 +37,33 @@ class Acc{
 class Current : public Acc{
     public:
         void calculateCI(){
-                static int rate2=10;
+                static float rate2=10;
                 int time1;
-                int bala;
+                float bala;
+                int balaCI = balance;
                 cout<<"Enter the time this plan in year."<<endl;
                 cin>>time1;
+                cout<<balaCI;
+                bala=balance*pow((1+rate2/100),time1);
+                /*bala=balance+bala;
+                cout<<"The total amount of money in the Current Account is :-"<<bala<<endl;
                 bala=balance*pow((1+rate2/100),time);
                 bala=balance+bala;
-                cout<<"The total amount of money in the Current Account is :-"<<bala<<endl;
+                cout<<"The total amount of money in the Current Account is :-"<<bala<<endl;*/
             }
 };
 class Saving : public Acc{
     public:
          void calculateSI(){
-            static int rate1=5;
+            static float rate1=5;
             int time;
-            int bal;
+            float  bal;
             cout<<"Enter the time this plan in year."<<endl;
             cin>>time;
-            bal=balance+(balance*time*rate1);
-            cout<<"The total amount of money in the Saving Account is :-"<<bal<<endl;
+            bal=(balance*time*rate1)/100;
+            cout<<"The total intrest of money in the Saving Account is :-"<<bal<<endl;
+            bal=balance+bal;
+            cout<<"The total intrest of money in the Saving Account is :-"<<bal<<endl;
         }
 
 };
