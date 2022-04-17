@@ -2,7 +2,7 @@
 using namespace std;
 class Account
 {
-	protected:
+	public:
 		string customer_name;
 		int acc_num;
 		string acc_type;
@@ -34,7 +34,7 @@ class Account
 			cout<<"The total amount of money: "<<balance<<endl;
 		}
 };
-class saving:public Account
+/*class saving:public Account
 {
 		int s_interest;
 		public:
@@ -49,7 +49,7 @@ class saving:public Account
 				
 			}
 	//compound intrest =10%
-};
+};*/
 class current:public Account
 {
 	int c_interest;
@@ -57,7 +57,7 @@ class current:public Account
 			void simple_interest()
 			{
 				int rate2,time2;
-				rate2 = 5%;
+				rate2 = 5;
 				cout<<"\nEnter time: ";
 				cin>>time2;
 				c_interest=balance*time2*rate2;
@@ -68,7 +68,7 @@ class current:public Account
 int main()
 {
 	current obj1;
-	saving obj2;
+	current obj2;
 	obj1.getdata();
-	
+	return 0;
 }
