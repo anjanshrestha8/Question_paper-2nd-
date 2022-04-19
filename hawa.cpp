@@ -40,11 +40,11 @@ class Current : public Acc{
             static float rate=10;
             float time1=0;
             float bala=0;
-            cout<<"Enter the time"<<endl;
+            cout<<"Enter the time this plan in year."<<endl;
             cin>>time1;
             //cout<<"rate"<<rate;
             bala=balance*pow((1+rate/100),time1);
-            cout<<"The Compound Intrest is :-"<<bala<<endl;
+            cout<<"The Compound Intrest of money in the Saving Account is:- "<<bala<<endl;
             bala=balance+bala;
             cout<<"The total amount of Compound Intrest is:-"<<bala<<endl;
             }
@@ -59,14 +59,15 @@ class Saving : public Acc{
             cout<<"Enter the time this plan in year."<<endl;
             cin>>time;
             bal=(balance*time*rate1)/100;
-            cout<<"The total intrest of money in the Saving Account is :-"<<bal<<endl;
+            cout<<"The total intrest of money in the Saving Account is:- "<<bal<<endl;
             bal=balance+bal;
-            cout<<"The total intrest of money in the Saving Account is :-"<<bal<<endl;
+            cout<<"The total intrest of money in the Saving Account is:- "<<bal<<endl;
         }
 
 };
 //float Saving :: rate1=10;
 int main(){
+    
     Saving obj;
     Current obj1;
     int a;
