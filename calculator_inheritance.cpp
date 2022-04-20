@@ -21,7 +21,7 @@ class As:public Calculate{
 			cout<<"The subtraction is :-"<<subs<<endl;
 	}
 };
-class Md : public Calculate,public As{
+class Md : public Calculate{
 	public:	
 		void multiplication(){
 			int mul =a*b;
@@ -36,10 +36,12 @@ class Md : public Calculate,public As{
 };
 int main(){
 	As obj;
+	Md obj1;
 	obj.getData();
 	obj.addition();
 	obj.sub();
-	obj.multiplication();
-	obj.divi();
+	obj1.getData();
+	obj1.multiplication();
+	obj1.division();
 	return 0;
 }
