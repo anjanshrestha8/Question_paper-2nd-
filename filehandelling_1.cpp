@@ -3,7 +3,8 @@
 //open a file
 //read a file
 //delete file
-/*#include<iostream>
+/*
+#include<iostream>
 #include<fstream>
 using namespace std;
 int main(){
@@ -19,7 +20,9 @@ int main(){
         FileName.close(); 
     }
     return 0;
-}*/
+}
+*/
+///*
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -31,14 +34,13 @@ int main(){
     }
     else {
     	char ch;
-    	while(1){
-    		OVER>>ch;
+    	while(!a.eof()){
+    		a>>ch;
     		cout<<ch;
-    		if(OVER.eof){
-    			break;
-			}
+    	
 		}
 	}
-	a.close();return 0;
+	a.close();
+	return 0;
 	
-}
+}//*/
