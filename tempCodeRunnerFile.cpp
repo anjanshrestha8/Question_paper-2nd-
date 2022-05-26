@@ -1,0 +1,1 @@
+/* WAP to add 2 objects of a class using friend function. The class consists of hour and minute as data members input(), sum() and output() */

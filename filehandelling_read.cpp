@@ -5,7 +5,7 @@ int main(){
 	fstream a;
 	a.open("D:overxata.txt",ios::in);
 	if(!a){
-		cout<<"File doesnot exits";
+		cout<<"File doesnot ";
 	}
 	else{
 		string b;

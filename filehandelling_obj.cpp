@@ -39,7 +39,7 @@ class student
   {
 	   int temp;
 	  
-	   cout<"Enter roll no: ";
+	   cout<<"Enter roll no: ";
 	   cin>>temp;
 	   fstream file;
 	   file.open("stu.dat",ios::in);

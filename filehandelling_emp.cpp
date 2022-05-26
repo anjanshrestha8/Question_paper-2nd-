@@ -16,16 +16,16 @@ class X{
 void X::put(){
 	fstream File;
 	File.open("emp.dat",ios::out|ios::app);
-	cout<<"Enter the id of the employee";
+	cout<<"Enter the id of the employee.\n";
 	cin>>id;
 	fflush(stdin);
-	cout<<"Enter the name of the employee";
+	cout<<"Enter the name of the employee.\n";
 	getline(cin,name);
 	fflush(stdin);
-	cout<<"Enter the position of the employee";
+	cout<<"Enter the position of the employee.\n";
 	getline(cin,position);
 	fflush(stdin);
-	cout<<"Enter the salary of the employee";
+	cout<<"Enter the salary of the employee.\n";
 	cin>>salary;
 	fflush(stdin);
 	File.write((char*)this,sizeof(X));
@@ -34,14 +34,25 @@ void X::put(){
 } 
 void X::get(){
 	int temp;
-	cout<<"Enter the id of the employee u want to get information";
+	fstream File;cout<<"Enter the id of the employee u want to get information.\n";
 	cin>>temp;
-	fstream.File1;
-	File1.open()
+	File.open("emp.dat",ios::in);
+	File.seekg(0,ios::beg);
+	while(File.read((char*)this,sizeof(X)));
+	{
+		if(id==temp){
+			cout<<"ID NO:-"<<id<<endl;
+			cout<<"Employee Name:-"<<name<<endl;
+			cout<<"Employee Position:-"<<position<<endl;
+			cout<<"Employee's Salary:-"<<salary<<endl;
+		}
+	}
+	File.close();
+	obj.switch_case();
 }
 void X::switch_case(){
 	int i;
-	cout<<"Enter the your choice.\n1.Write\n2.Read\n3.Exit";
+	cout<<"Enter the your choice.\n1.Write\n2.Read\n3.Exit\n";
 	cin>>i;
 	switch(i)
 	{

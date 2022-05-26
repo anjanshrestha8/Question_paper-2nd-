@@ -2,8 +2,7 @@
 //create a file
 //open a file
 //read a file
-//delete file
-/*
+//delete file*
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -21,26 +20,30 @@ int main(){
     }
     return 0;
 }
-*/
-///*
+
+
+
 #include<iostream>
 #include<fstream>
 using namespace std;
 int main(){
 	fstream a;
-	a.open("D:\OVER.txt",ios::in);
+	a.open("D:overxata.txt",ios::in);
 		if(!a){
 		 cout<<"No such file";
     }
     else {
-    	char ch;
-    	while(!a.eof()){
-    		a>>ch;
-    		cout<<ch;
+    	string ch;
+    	if(a.is_open()){
+			while(!a.eof())
+			{
+    	 		getline(a,ch);
+    			cout<<ch;
     	
+			}
 		}
 	}
 	a.close();
 	return 0;
-	
-}//*/
+}
+

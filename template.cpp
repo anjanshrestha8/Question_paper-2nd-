@@ -1,7 +1,7 @@
 //wap to use ascending number using template.
 #include<iostream>
 using namespace std;
-class Swap{
+
 		template <typename T>
 		void ass(T num,T getnum[]){
 		
@@ -22,7 +22,7 @@ class Swap{
 			}
 			
 		}
-};
+
 int main(){
 	Swap obj;
 	int n,i,a[10];
