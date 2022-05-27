@@ -14,6 +14,7 @@ class X{
 		void switch_case();
 }; X obj;
 void X::put(){
+	int positionp;
 	fstream File;
 	File.open("emp.dat",ios::out|ios::app);
 	cout<<"Enter the id of the employee.\n";
@@ -29,15 +30,18 @@ void X::put(){
 	cin>>salary;
 	fflush(stdin);
 	File.write((char*)this,sizeof(X));
+	positionp=File.tellp();
+	cout<<"The position of pointer is"<<positionp<<endl;
 	File.close();
 	obj.switch_case();
 } 
 void X::get(){
 	int temp;
+	//int positon;
 	fstream File;cout<<"Enter the id of the employee u want to get information.\n";
 	cin>>temp;
 	File.open("emp.dat",ios::in);
-	File.seekg(0,ios::beg);
+	File.seekg(24,ios::beg);
 	while(File.read((char*)this,sizeof(X)));
 	{
 		if(id==temp){
