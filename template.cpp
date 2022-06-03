@@ -1,8 +1,8 @@
 //wap to use ascending number using template.
-#include<iostream>
+/*#include<iostream>
 using namespace std;
 
-		template <typename T>
+template <typename T>
 		void ass(T num,T getnum[]){
 		
 			T temp;
@@ -24,7 +24,7 @@ using namespace std;
 		}
 
 int main(){
-	Swap obj;
+	T ass;
 	int n,i,a[10];
 	cout<<"Enter the total  no u want to enter "<<endl;
 	cin>>n;
@@ -32,6 +32,12 @@ int main(){
 	for(i=0;i<n;i++){
 		cin>>a[i];	
 	}
-	obj.ass<int>(n,a[i]);
+	ass<int>(n,a[i]);
 	return 0;
+}*/
+#include<iostream>
+using namespace std;
+
+template<typename T>{
+	
 }

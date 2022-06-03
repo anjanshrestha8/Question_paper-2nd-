@@ -13,7 +13,7 @@ class Wall
 			height=0;
 			
 		}
-		Wall(double len,double hgt)//parameterized constructor
+		Wall(float len,float hgt)//parameterized constructor
 		{
 			length=len;
 			height=hgt;	

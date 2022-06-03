@@ -29,7 +29,7 @@ class student
 	   gets(f_name);
 
 	   file.open("stu.dat",ios::out|ios::app);
-	//file.seekp(0,ios::beg);
+	   file.seekp(0,ios::beg);
 	   file.write((char *)this,sizeof(student));
 	   file.close();
 	   s.switch_case();
@@ -48,9 +48,10 @@ class student
 	    {
 		    if(roll==temp)
 		    {
-			    cout<<"roll no. "<<roll<<endl;
-			    cout<<"stu name:  "<<name<<endl;
-			    cout<<"father name: "<<f_name;
+				cout<<"The details of the student is :-"<<endl;
+				cout<<"Roll no. "<<roll<<endl;
+			    cout<<"Student Name:  "<<name<<endl;
+			    cout<<"Father Name: "<<f_name<<endl;
 		   }
 	   }
 	    file.close();
